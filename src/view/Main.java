@@ -8,7 +8,7 @@ public class Main {
 		ProcesController procesController = new ProcesController();
 		procesController.listProcess(procesController.getOS());
 		pid = Integer.parseInt(JOptionPane.showInputDialog("Insira o PID do processo a ser encerrado"));
-		procesController.killProcessIp(procesController.getOS(), pid);
+		procesController.killProcessPid(procesController.getOS(), pid);
 	}
 
 }

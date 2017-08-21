@@ -32,7 +32,7 @@ public class ProcesController {
 		}
 	}
 	
-	public void killProcessIp(String OS,int PID){
+	public void killProcessPid(String OS,int PID){
 		String cmdPid = "TASKKILL /PID ";
 		StringBuffer buffer = new StringBuffer();
 			buffer.append(cmdPid);
