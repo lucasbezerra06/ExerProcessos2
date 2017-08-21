@@ -45,6 +45,19 @@ public class ProcesController {
 		}
 	}
 	
+	public void killProcessName(String OS,String Nome){
+		String cmdNome = "TASKKILL /IM ";
+		StringBuffer buffer = new StringBuffer();
+			buffer.append(cmdNome);
+			buffer.append(Nome);
+		
+		try {
+			Runtime.getRuntime().exec(buffer.toString());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	
 	
 	
