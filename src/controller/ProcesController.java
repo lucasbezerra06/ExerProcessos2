@@ -32,6 +32,21 @@ public class ProcesController {
 		}
 	}
 	
+	public void killProcessIp(String OS,int PID){
+		String cmdPid = "TASKKILL /PID ";
+		StringBuffer buffer = new StringBuffer();
+			buffer.append(cmdPid);
+			buffer.append(PID);
+		
+		try {
+			Runtime.getRuntime().exec(buffer.toString());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	
 	
 
 }
